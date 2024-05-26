@@ -1,18 +1,6 @@
 from PIL import Image, ImageFilter
 
-img = Image.open('in/1.jpg')
-
-img = img.filter(ImageFilter.CONTOUR)
-img.save("out/1.jpg")
-
-img = img.filter(ImageFilter.CONTOUR)
-img.save("out/2.jpg")
-
-img = img.filter(ImageFilter.CONTOUR)
-img.save("out/3.jpg")
-
-img = img.filter(ImageFilter.CONTOUR)
-img.save("out/4.jpg")
-
-img = img.filter(ImageFilter.CONTOUR)
-img.save("out/5.jpg")
+for i in range(1, 6):
+    img = Image.open(f'in/{i}.jpg')
+    input_image = img.filter(ImageFilter.CONTOUR)
+    input_image.save(f"out/{i}.jpg")
